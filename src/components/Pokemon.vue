@@ -3,7 +3,7 @@
     <div class="card pokemon">
       <!-- <img class="card-img-top" :src="" alt="pokemon"> -->
       <div class="card-body">
-          <h4 class="card-title">Name: {{pokemon.name}}</h4>
+          <h4 class="card-title">Name: {{pokedex.name}}</h4>
           <p calss="card-text">Type: {{}}</p>
         </div>
     </div>
