@@ -6,7 +6,7 @@
         <h4 class="card-title">
           Name: {{ pokedex.name }}
         </h4>
-        <p calss="card-text">
+        <p class="card-text">
           Type: {{}}
         </p>
       </div>

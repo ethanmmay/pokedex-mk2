@@ -15,7 +15,7 @@
               <h4 class="card-title">
                 {{ state.activePokemon.name }}
               </h4>
-              <p calss="card-text">
+              <p class="card-text">
                 Weight: {{ state.activePokemon.weight }}
               </p>
             </div>
@@ -47,8 +47,8 @@ export default {
 
     return {
       state,
-      getPokemonDetails(name) {
-        pokedexService.getPokemonDetails(name)
+      async getPokemonDetails(name) {
+        await pokedexService.getPokemonDetails(name)
       }
     }
   }
