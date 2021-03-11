@@ -9,7 +9,8 @@
             </div>
           </div>
         </div>
-        <div class="col-8">
+        <Pokemon/>
+        <!-- <div class="col-8">
           <div class="card pokemon" :v-if="state.activePokemon">
             <div class="card-body">
               <h4 class="card-title">
@@ -20,9 +21,9 @@
               </p>
             </div>
             <img class="card-img-top" :src="state.activePokemon.sprites.front_default" alt="pokemon">
-            <!-- <button></button> -->
+            <button></button>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
