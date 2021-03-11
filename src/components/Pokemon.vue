@@ -12,7 +12,11 @@
 
 <script>
 export default {
-
+  setup() {
+    const state = reactive({
+      pokedex: computed(() => AppState.pokedex)
+    })
+}
 }
 </script>
 
