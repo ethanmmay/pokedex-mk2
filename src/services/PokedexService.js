@@ -5,8 +5,9 @@ import { pokeApi } from './AxiosService'
 class PokedexService {
   async getPokemon() {
     try {
-      const res = await pokeApi.get()
-      AppState.pokemon = res.data
+      const res = await pokeApi.get('pokemon')
+      logger.log(res.data)
+      AppState.pokedex = res.data.results
     } catch (error) {
       logger.log(error)
     }

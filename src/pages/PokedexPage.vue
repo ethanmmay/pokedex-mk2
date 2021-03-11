@@ -1,6 +1,16 @@
 <template>
   <div class="">
-     {{state.pokedex}}
+    <div class="col-12">
+      <div class="row">
+        <div class="col-4 offset-2">
+          <div class="row" :v-for="pokemon in state.pokedex" :key="pokemon.name">
+            <div v-if="pokemon">
+              {{ pokemon.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,20 +22,20 @@ import { pokedexService } from '../services/PokedexService'
 export default {
   name: 'Pokedex',
   setup() {
-    const state = reactive ({
-        state: computed(() => AppState)
+    const state = reactive({
+      pokedex: computed(() => AppState.pokedex)
     })
-    onMounted (async() => {
-        pokedexService.getPokemon()
+
+    onMounted(async() => {
+      await pokedexService.getPokemon()
     })
 
     return {
-        state
+      state
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-
 </style>
