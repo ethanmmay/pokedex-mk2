@@ -35,5 +35,6 @@ export default {
 
 main {
   height: 80vh;
+  color: black;
 }
 </style>
