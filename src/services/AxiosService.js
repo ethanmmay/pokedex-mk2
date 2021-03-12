@@ -11,6 +11,11 @@ export const pokeApi = Axios.create({
   timeout: 8000
 })
 
+export const teamApi = Axios.create({
+  baseURL: 'https://bcw-sandbox.herokuapp.com/api/ethan/pokemon/',
+  timeout: 8000
+})
+
 export const setBearer = function(bearer) {
   api.defaults.headers.authorization = bearer
 }

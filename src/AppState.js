@@ -6,5 +6,6 @@ export const AppState = reactive({
   account: {},
   pokedex: [],
   team: [],
-  activePokemon: {}
+  activePokemon: {},
+  activeSprite: ''
 })

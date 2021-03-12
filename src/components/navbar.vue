@@ -37,6 +37,11 @@
             Wild Pokemon
           </router-link>
         </li>
+        <li class="nav-item">
+          <router-link :to="{ name: 'Team' }" class="nav-link">
+            Team
+          </router-link>
+        </li>
       </ul>
       <span class="navbar-text">
         <button

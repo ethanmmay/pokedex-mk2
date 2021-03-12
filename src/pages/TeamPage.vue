@@ -4,7 +4,7 @@
       <div class="row mt-5">
         <div class="col-4">
           <div id="example-1">
-            <div v-for="item in state.pokedex" :key="item.name" @click="getPokemonDetails( item.name )">
+            <div v-for="item in state.team" :key="item.name" @click="getPokemonDetails( item.name )">
               {{ item.name[0].toUpperCase() + item.name.slice(1) }}
             </div>
           </div>
@@ -22,16 +22,16 @@ import { pokedexService } from '../services/PokedexService'
 import { teamService } from '../services/TeamService'
 
 export default {
-  name: 'Pokedex',
+  name: 'Team',
   setup() {
     const state = reactive({
-      pokedex: computed(() => AppState.pokedex),
+      team: computed(() => AppState.team),
       activePokemon: computed(() => AppState.activePokemon),
       activeSprite: computed(() => AppState.activeSprite)
     })
 
     onMounted(async() => {
-      await pokedexService.getPokemon()
+      await teamService.getTeam()
     })
 
     return {
